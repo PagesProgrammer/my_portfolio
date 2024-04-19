@@ -1,0 +1,1383 @@
+// BODY/HTML
+*{
+  box-sizing: border-box;
+}
+
+%bg {
+  /* The image used */
+  background: url("../img/ash-edmonds-0aWZdK8nK2I-unsplash.jpg") no-repeat center center fixed;
+
+  /* Full height */
+  height: 100%; 
+  width: 100%;
+
+  /* Center and scale the image nicely */
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
+body, html{
+  @extend %bg;
+  margin: 0;
+  padding: 0;
+}
+
+// NAVBAR
+.around{
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 0;
+}
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(27, 19, 19);
+  color: white;
+  padding: 0;
+}
+.brand{
+  margin: 0.1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding-left: 10px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  a{
+    text-decoration: none;
+    color: white;
+  }
+}
+
+
+.navbar-links ul{
+  padding: 0;
+  margin: 0;
+  display: flex;
+  margin-right: 50px;
+  align-content: space-between;
+  
+}
+
+.navbar-links ul li{
+  list-style: none;
+}
+
+.navbar-links li a {
+  text-decoration: none;
+  color: white;
+  padding: 0.2rem;
+  margin-right: 5rem;
+  display: block;
+  font-family: Oswald;
+  font-size: 20px;
+}
+.navbar-links li a:hover{
+  background-color: #555;
+  color: black;
+}
+.toggle-button{
+  position: absolute;
+  top: 0.75rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+.toggle-button .bar{
+  background-color: white;
+  height: 3px;
+  width: 100%;
+}
+
+
+// MEDIA QUERRY FOR NAVBAR
+@media (max-width: 700px){
+  .toggle-button{
+    display: flex;
+    
+  }
+  .navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+  }
+
+  .navbar-links{
+    display: none;
+    width: 100%;
+  }
+  .navbar-links{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .navbar-links ul{
+    width: 100%;
+    flex-direction: column;
+  }
+  .navbar-links li{
+    text-align: center;
+  }
+  .navbar-links li a{
+    padding: 0.5rem 1rem;
+  }
+  .navbar-links.active{
+    display: flex;
+  }
+  .brand{
+    font-size: 1rem;
+  }
+  .around{
+    position: static;
+  }
+  
+}
+
+
+
+// PICTURE/DETAILS:
+%col-lg-6{
+  background-color: rgb(73, 71, 78);
+  border: 2px solid black;
+  font-size: 20px;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.picture{
+  @extend %col-lg-6;
+}
+
+.details{
+  @extend %col-lg-6;
+  text-align: center;
+  color: whitesmoke;
+  font-size: 20px;
+  font-family: Raleway;
+}
+.networks{
+  @extend %col-lg-6;
+  background-color: blue;
+  text-align: center;
+}
+
+.container_profile{
+  align-content: center;
+  margin: 150px 100px 0 100px;
+}
+img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+// SOCIAL NETWORKS
+.col-sm-12 {
+  
+a{
+  color: white;
+  padding: 5px;
+  margin: 20px;
+  text-decoration: none;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: bold;
+  
+}
+  h1{
+    color: white;
+  }
+}
+
+a:hover{
+  background-color: whitesmoke;
+  color: black;
+  border: 1px solid white;
+  border-radius: 10px;
+}
+
+// SHORT NOTE
+.container_myself{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.item_note{
+  h1{
+    font-family: Montserrat;
+    font-weight: bold;
+    color: aqua;
+  }
+  margin: 10px 50px 20px 50px;
+  padding: 20px;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 20px;
+  color: aliceblue;
+  background-color:rgb(73, 71, 78) ;
+  border-radius: 5px;
+}
+
+// EXPERIENCE
+.container_experince{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+%experience{
+  background-color: palegreen;
+  border: 2px solid black;
+  font-size: 20px;
+  border-radius: 10px;
+  padding: 50px;
+  margin: 70px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.experience_one{
+  @extend %experience;
+  margin-top: 150px;
+  .date-role-one{
+    h6{
+      font-size: 20px;
+      font-family: 'Courier New', Courier, monospace;
+    }
+    font-family: Raleway;
+    font-size: 25px;
+  }
+ 
+  .company_and_duties_one{
+    text-align:start;
+    padding: 10px;
+    font-family:Arial, Helvetica, sans-serif;
+  }
+}
+.experience_two{
+  @extend %experience;
+  .date-role-two{
+    h6{
+      font-size: 20px;
+      font-family: 'Courier New', Courier, monospace;
+    }
+    font-family: Raleway;
+    font-size: 25px;
+  }
+ 
+  .company_and_duties_two{
+    text-align:start;
+    padding: 10px;
+    font-family:Arial, Helvetica, sans-serif;
+  }
+}
+.experience_three{
+  @extend %experience;
+  .date-role-three{
+    h6{
+      font-size: 20px;
+      font-family: 'Courier New', Courier, monospace;
+    }
+    font-family: Raleway;
+    font-size: 25px;
+  }
+ 
+  .company_and_duties_three{
+    text-align:start;
+    padding: 10px;
+    font-family:Arial, Helvetica, sans-serif;
+  }
+}
+.experience_four{
+  @extend %experience;
+  .date-role-four{
+    h6{
+      font-size: 20px;
+      font-family: 'Courier New', Courier, monospace;
+    }
+    font-family: Raleway;
+    font-size: 25px;
+  }
+ 
+  .company_and_duties_four{
+    text-align:start;
+    padding: 10px;
+    font-family:Arial, Helvetica, sans-serif;
+  }
+  
+}
+
+
+// EDUCATION
+.container_education{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+%education{
+  background-color: palegreen;
+  border: 2px solid black;
+  font-size: 20px;
+  border-radius: 10px;
+  padding: 40px;
+  margin: 50px 15% 5px 20%;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  min-width: 60%;
+  text-align: center;
+}
+
+.education_one{
+  @extend %education;
+  margin-top: 120px;
+  .date-one{
+    text-align: start;
+    h6{
+      font-size: 20px;
+      font-family: 'Courier New', Courier, monospace;
+    }
+    font-family: Raleway;
+    font-size: 25px;
+  }
+  .course-and-syllabus-one{
+    text-align: center;
+    padding: 10px;
+    font-family:Arial, Helvetica, sans-serif;
+  }
+}
+.education_two{
+  @extend %education;
+  .date-two{
+    text-align: start;
+    h6{
+      font-size: 20px;
+      font-family: 'Courier New', Courier, monospace;
+    }
+    font-family: Raleway;
+    font-size: 25px;
+  }
+  .course-and-syllabus-two{
+    text-align: center;
+    padding: 10px;
+    font-family:Arial, Helvetica, sans-serif;
+  }
+}
+.education_three{
+  @extend %education;
+  .date-three{
+    text-align: start;
+    h6{
+      font-size: 20px;
+      font-family: 'Courier New', Courier, monospace;
+    }
+    font-family: Raleway;
+    font-size: 25px;
+  }
+  .course-and-syllabus-three{
+    text-align: center;
+    padding: 10px;
+    font-family:Arial, Helvetica, sans-serif;
+  }
+}
+.education_four{
+  @extend %education;
+  .date-four{
+    text-align: start;
+    h6{
+      font-size: 20px;
+      font-family: 'Courier New', Courier, monospace;
+    }
+    font-family: Raleway;
+    font-size: 25px;
+  }
+  .course-and-syllabus-four{
+    text-align: center;
+    padding: 10px;
+    font-family:Arial, Helvetica, sans-serif;
+  }
+}
+.education_five{
+  @extend %education;
+  .date-five{
+    text-align: start;
+    h6{
+      font-size: 20px;
+      font-family: 'Courier New', Courier, monospace;
+    }
+    font-family: Raleway;
+    font-size: 25px;
+  }
+  .course-and-syllabus-five{
+    text-align: center;
+    padding: 10px;
+    font-family:Arial, Helvetica, sans-serif;
+  }
+}
+.education_six{
+  @extend %education;
+  .date-six{
+    text-align: start;
+    h6{
+      font-size: 20px;
+      font-family: 'Courier New', Courier, monospace;
+    }
+    font-family: Raleway;
+    font-size: 25px;
+  }
+  .course-and-syllabus-six{
+    text-align: center;
+    padding: 10px;
+    font-family:Arial, Helvetica, sans-serif;
+  }
+}
+.education_seven{
+  @extend %education;
+  .date-seven{
+    text-align: start;
+    h6{
+      font-size: 20px;
+      font-family: 'Courier New', Courier, monospace;
+    }
+    font-family: Raleway;
+    font-size: 25px;
+  }
+  .course-and-syllabus-seven{
+    text-align: center;
+    padding: 10px;
+    font-family:Arial, Helvetica, sans-serif;
+  }
+}
+.education_eight{
+  @extend %education;
+  .date-eight{
+    text-align: start;
+    h6{
+      font-size: 20px;
+      font-family: 'Courier New', Courier, monospace;
+    }
+    font-family: Raleway;
+    font-size: 25px;
+  }
+  .course-and-syllabus-eight{
+    text-align: center;
+    padding: 10px;
+    font-family:Arial, Helvetica, sans-serif;
+  }
+}
+.education_nine{
+  @extend %education;
+  .date-nine{
+    text-align: start;
+    h6{
+      font-size: 20px;
+      font-family: 'Courier New', Courier, monospace;
+    }
+    font-family: Raleway;
+    font-size: 25px;
+  }
+  .course-and-syllabus-nine{
+    text-align: center;
+    padding: 10px;
+    font-family:Arial, Helvetica, sans-serif;
+  }
+}
+.education_ten{
+  @extend %education;
+  margin-bottom: 50px;
+  .date-ten{
+    text-align: start;
+    h6{
+      font-size: 20px;
+      font-family: 'Courier New', Courier, monospace;
+    }
+    font-family: Raleway;
+    font-size: 25px;
+  }
+  .course-and-syllabus-ten{
+    text-align: center;
+    padding: 10px;
+    font-family:Arial, Helvetica, sans-serif;
+  }
+}
+
+
+
+// PROJECT
+#project{
+  margin-left: 100px;
+}
+
+%project{
+  background-color: lightgreen;
+  border: 2px solid black;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  margin: 20px;
+  padding: 10px;
+  img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+}
+
+.project_one{
+  @extend %project;
+ a[href]{
+    text-align: center;
+    font-weight: bold;
+    color: black;
+  }
+ 
+}
+.project_two{
+  @extend %project;
+  a[href]{
+    text-align: center;
+    font-weight: bold;
+    color: black;
+  }
+}
+.project_three{
+  @extend %project;
+  a[href]{
+    text-align: center;
+    font-weight: bold;
+    color: black;
+  }
+}
+
+.container_project_one{
+  margin: 100px 10% 0 10%;
+  div > h1{
+    text-align: start;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 10px;
+    margin: 20px;
+    color: white;
+    text-decoration-line: underline;
+  }
+}
+.container_project_two{
+  margin: 0 10% 0 10%;
+  div > h1{
+    text-align: start;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 10px;
+    margin: 20px;
+    color: white;
+    text-decoration-line: underline;
+  }
+}
+.container_project_three{
+  margin: 0 10% 50px 10%;
+  div > h1{
+    text-align: start;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 10px;
+    margin: 20px;
+    color: white;
+    text-decoration-line: underline;
+  }
+}
+
+a > img:hover{
+  background-color: rgb(226, 207, 207);
+  border-radius: 10px;
+  padding: 20px;
+}
+a > h5:hover{
+  border-radius: 10px;
+  padding: 20px;
+}
+
+// CONTACT
+.contact_container{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+%contact{
+  background-color: palegreen;
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 20px;
+  
+ font-size: 25px;
+ 
+}
+.contact_one{
+  @extend %contact;
+  margin: 120px 30% 20px 25%;
+ 
+  input{
+    width: 600px;
+    border-radius: 10px;
+  }
+  textarea{
+    width: 100%;
+    border-radius: 10px;
+  }
+  label{
+    padding: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif
+  }
+  button{
+    width: 100%;
+    background-color: blueviolet;
+    font-size: 23px;
+    font-family: Oswald;
+    border-radius: 10px;
+  }
+  
+}
+button:hover{
+  background-color: cadetblue;
+  font-weight: bold;
+}
+
+.contact_two{
+  @extend %contact;
+  margin: 50px 26.9% 50px 25%;
+  text-align: center;
+  width: 100%;
+  #contact-icons{
+    background-color: blueviolet;
+    margin: 10px 50px 10px 50px;
+    padding: 15px;
+    border-radius: 10px;
+
+    a{
+      color: black;
+      margin: 10px;
+      padding: 10px;
+      text-decoration: none;
+      font-family: Raleway;
+    }
+  #contact-icons a:hover{
+    background-color: #555;
+  }
+    
+  }
+  #fullName h2{
+    padding: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+  }
+  #prof p{
+    padding: 10px;
+    font-family:Montserrat;
+  }
+}
+
+
+// SKILL
+.container_skill{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+%skill{
+  background-color: lightgreen;
+  border: 2px solid black;
+  font-size: 20px;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 60px 15% 10px 15% ;
+  div{
+    padding: 10px;
+  }
+}
+
+.skill_one{
+  @extend %skill;
+  margin-top: 130px
+  
+}
+.header  h3{
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  font-family: Roboto;
+  text-decoration: underline;
+  
+}
+
+.skill_two{
+  @extend %skill;
+  margin-bottom: 60px;
+}
+.header-two  h3{
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  font-family: Roboto;
+  text-decoration: underline;
+  
+}
+
+
+// THANKS
+.thanks{
+  font-weight: bold;
+  font-size: 30px;
+  text-align: center;
+  margin: 150px 100px 100px 100px;
+  color: white;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+
+// ANIMATION
+.transition-fade {
+  opacity: 1;
+  transition: 500ms;
+  /* transform: translateX(0); */
+  transform-origin: right;
+  animation: transitionIn 0.75s;
+} 
+
+html.is-animating .transition-fade {
+  opacity: 1;
+  transform: translateX(100%);
+}
+
+html.is-leaving .transition-fade {
+  opacity: 0;
+  transform: translateX(0);
+}
+.transition-swipe {
+  transition: 500ms;
+  /* transform: translateY(0); */
+}
+
+html.is-animating .transition-swipe {
+  opacity: 1;
+  transform: translateY(100px);
+}
+
+@keyframes transitionIn {
+  from {
+    opacity: 0;
+    transform: rotateX(-20deg);
+  }
+
+  to {
+    opacity: 1;
+    transform: rotateX(0);
+  }
+}
+
+// MEDIA QUERRY 420PX
+@media (max-width:420px) {
+
+// PICTURE/DETAILS:
+%col-lg-6{
+  background-color: rgb(73, 71, 78);
+  border: 2px solid black;
+  font-size: 20px;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.picture{
+  @extend %col-lg-6;
+}
+
+.details{
+  @extend %col-lg-6;
+  text-align: center;
+  color: whitesmoke;
+  font-size: 20px;
+  font-family: Raleway;
+  padding: 10px;
+}
+.networks{
+  @extend %col-lg-6;
+  background-color: blue;
+  text-align: center;
+}
+
+.container_profile{
+  align-content: center;
+  margin: 80px 60px 60px 60px;
+}
+img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+// SOCIAL NETWORKS
+.col-sm-12 {
+  
+a{
+  color: white;
+  padding: 5px;
+  margin: 5px;
+  text-decoration: none;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: bold;
+  
+}
+  h1{
+    color: white;
+  }
+}
+
+a:hover{
+  background-color: whitesmoke;
+  color: black;
+  border: 1px solid white;
+  border-radius: 10px;
+}
+
+// SHORT NOTE
+.container_myself{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.item_note{
+  h1{
+    font-family: Montserrat;
+    font-weight: bold;
+    color: aqua;
+  }
+  margin: 10px 30px 50px 30px;
+  padding: 20px;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 20px;
+  color: aliceblue;
+  background-color:rgb(73, 71, 78) ;
+  border-radius: 5px;
+}
+
+
+// EXPERIENCE
+.container_experince{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+%experience{
+  background-color: palegreen;
+  border: 2px solid black;
+  font-size: 20px;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px 20px 30px 20px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.experience_one{
+  @extend %experience;
+  margin-top: 100px;
+  .date-role-one{
+    h6{
+      font-size: 20px;
+      font-family: 'Courier New', Courier, monospace;
+    }
+    font-family: Raleway;
+    font-size: 25px;
+  }
+ 
+  .company_and_duties_one{
+    text-align:start;
+    padding: 10px;
+    font-family:Arial, Helvetica, sans-serif;
+  }
+}
+.experience_two{
+  @extend %experience;
+  .date-role-two{
+    h6{
+      font-size: 20px;
+      font-family: 'Courier New', Courier, monospace;
+    }
+    font-family: Raleway;
+    font-size: 25px;
+  }
+ 
+  .company_and_duties_two{
+    text-align:start;
+    padding: 10px;
+    font-family:Arial, Helvetica, sans-serif;
+  }
+}
+.experience_three{
+  @extend %experience;
+  .date-role-three{
+    h6{
+      font-size: 20px;
+      font-family: 'Courier New', Courier, monospace;
+    }
+    font-family: Raleway;
+    font-size: 25px;
+  }
+ 
+  .company_and_duties_three{
+    text-align:start;
+    padding: 10px;
+    font-family:Arial, Helvetica, sans-serif;
+  }
+}
+.experience_four{
+  @extend %experience;
+  .date-role-four{
+    h6{
+      font-size: 20px;
+      font-family: 'Courier New', Courier, monospace;
+    }
+    font-family: Raleway;
+    font-size: 25px;
+  }
+ 
+  .company_and_duties_four{
+    text-align:start;
+    padding: 10px;
+    font-family:Arial, Helvetica, sans-serif;
+  }
+  
+}
+
+
+// EDUCATION
+.container_education{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+%education{
+  background-color: palegreen;
+  border: 2px solid black;
+  font-size: 20px;
+  border-radius: 10px;
+  padding: 30px;
+  margin: 30px 5% 10px 5%;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  min-width: 60%;
+  text-align: center;
+}
+
+.education_one{
+  @extend %education;
+  margin-top: 80px;
+  .date-one{
+    text-align: start;
+    h6{
+      font-size: 20px;
+      font-family: 'Courier New', Courier, monospace;
+    }
+    font-family: Raleway;
+    font-size: 25px;
+  }
+  .course-and-syllabus-one{
+    text-align: left;
+    padding: 10px;
+    font-family:Arial, Helvetica, sans-serif;
+  }
+}
+.education_two{
+  @extend %education;
+  .date-two{
+    text-align: start;
+    h6{
+      font-size: 20px;
+      font-family: 'Courier New', Courier, monospace;
+    }
+    font-family: Raleway;
+    font-size: 25px;
+  }
+  .course-and-syllabus-two{
+    text-align: left;
+    padding: 10px;
+    font-family:Arial, Helvetica, sans-serif;
+  }
+}
+.education_three{
+  @extend %education;
+  .date-three{
+    text-align: start;
+    h6{
+      font-size: 20px;
+      font-family: 'Courier New', Courier, monospace;
+    }
+    font-family: Raleway;
+    font-size: 25px;
+  }
+  .course-and-syllabus-three{
+    text-align: left;
+    padding: 10px;
+    font-family:Arial, Helvetica, sans-serif;
+  }
+}
+.education_four{
+  @extend %education;
+  .date-four{
+    text-align: start;
+    h6{
+      font-size: 20px;
+      font-family: 'Courier New', Courier, monospace;
+    }
+    font-family: Raleway;
+    font-size: 25px;
+  }
+  .course-and-syllabus-four{
+    text-align: left;
+    padding: 10px;
+    font-family:Arial, Helvetica, sans-serif;
+  }
+}
+.education_five{
+  @extend %education;
+  .date-five{
+    text-align: start;
+    h6{
+      font-size: 20px;
+      font-family: 'Courier New', Courier, monospace;
+    }
+    font-family: Raleway;
+    font-size: 25px;
+  }
+  .course-and-syllabus-five{
+    text-align: left;
+    padding: 10px;
+    font-family:Arial, Helvetica, sans-serif;
+  }
+}
+.education_six{
+  @extend %education;
+  .date-six{
+    text-align: start;
+    h6{
+      font-size: 20px;
+      font-family: 'Courier New', Courier, monospace;
+    }
+    font-family: Raleway;
+    font-size: 25px;
+  }
+  .course-and-syllabus-six{
+    text-align: left;
+    padding: 10px;
+    font-family:Arial, Helvetica, sans-serif;
+  }
+}
+.education_seven{
+  @extend %education;
+  .date-seven{
+    text-align: start;
+    h6{
+      font-size: 20px;
+      font-family: 'Courier New', Courier, monospace;
+    }
+    font-family: Raleway;
+    font-size: 25px;
+  }
+  .course-and-syllabus-seven{
+    text-align: left;
+    padding: 10px;
+    font-family:Arial, Helvetica, sans-serif;
+  }
+}
+.education_eight{
+  @extend %education;
+  .date-eight{
+    text-align: start;
+    h6{
+      font-size: 20px;
+      font-family: 'Courier New', Courier, monospace;
+    }
+    font-family: Raleway;
+    font-size: 25px;
+  }
+  .course-and-syllabus-eight{
+    text-align: left;
+    padding: 10px;
+    font-family:Arial, Helvetica, sans-serif;
+  }
+}
+.education_nine{
+  @extend %education;
+  .date-nine{
+    text-align: start;
+    h6{
+      font-size: 20px;
+      font-family: 'Courier New', Courier, monospace;
+    }
+    font-family: Raleway;
+    font-size: 25px;
+  }
+  .course-and-syllabus-nine{
+    text-align: left;
+    padding: 10px;
+    font-family:Arial, Helvetica, sans-serif;
+  }
+}
+.education_ten{
+  @extend %education;
+  margin-bottom: 50px;
+  .date-ten{
+    text-align: start;
+    h6{
+      font-size: 20px;
+      font-family: 'Courier New', Courier, monospace;
+    }
+    font-family: Raleway;
+    font-size: 25px;
+  }
+  .course-and-syllabus-ten{
+    text-align: left;
+    padding: 10px;
+    font-family:Arial, Helvetica, sans-serif;
+  }
+}
+
+
+
+// PROJECT
+%project{
+  background-color: lightgreen;
+  border: 2px solid black;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  margin: 20px 100px 20px 0;
+  padding: 0 50px 0 50px;
+  img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+}
+
+.project_one{
+  @extend %project;
+ a[href]{
+    text-align: center;
+    font-weight: bold;
+    color: black;
+  }
+ 
+}
+.project_two{
+  @extend %project;
+  a[href]{
+    text-align: center;
+    font-weight: bold;
+    color: black;
+  }
+}
+.project_three{
+  @extend %project;
+  a[href]{
+    text-align: center;
+    font-weight: bold;
+    color: black;
+  }
+}
+
+.container_project_one{
+  margin: 80px 50px 30px 50px;
+  div > h1{
+    text-align: start;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 10px;
+    margin: 10px 0;
+    color: white;
+    text-decoration-line: underline;
+  }
+}
+.container_project_two{
+  margin: 30px 50px 30px 50;
+  div > h1{
+    text-align: start;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 10px;
+    margin: 10px 0;
+    color: white;
+    text-decoration-line: underline;
+  }
+}
+.container_project_three{
+  margin: 30px 50px 30px 50;
+  div > h1{
+    text-align: start;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 10px;
+    margin: 20px 0;
+    color: white;
+    text-decoration-line: underline;
+  }
+}
+
+a > img:hover{
+  background-color: rgb(226, 207, 207);
+  border-radius: 10px;
+  padding: 20px;
+}
+a > h5:hover{
+  border-radius: 10px;
+  padding: 20px;
+}
+
+
+
+// CONTACT
+.contact_container{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+%contact{
+  background-color: palegreen;
+  border: 2px solid black;
+  border-radius: 10px;
+  
+  
+ font-size: 25px;
+ 
+}
+.contact_one{
+  @extend %contact;
+  margin: 120px 1% 20px 1%;
+ 
+  input{
+    width: 380px;
+    border-radius: 10px;
+  }
+  textarea{
+    width: 100%;
+    border-radius: 10px;
+  }
+  label{
+    padding: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif
+  }
+  button{
+    width: 100%;
+    background-color: blueviolet;
+    font-size: 23px;
+    font-family: Oswald;
+    border-radius: 10px;
+  }
+  
+}
+button:hover{
+  background-color: cadetblue;
+  font-weight: bold;
+}
+
+
+.contact_two{
+  @extend %contact;
+  margin: 50px 1% 50px 1%;
+  text-align: center;
+  width: 100%;
+  #contact-icons{
+    background-color: blueviolet;
+    margin: 5px 20px 10px 20px;
+    padding: 15px;
+    border-radius: 10px;
+
+    a{
+      color: black;
+      margin: 10px;
+      padding: 10px;
+      text-decoration: none;
+      font-family: Raleway;
+    }
+  #contact-icons a:hover{
+    background-color: #555;
+  }
+    
+  }
+  #fullName h2{
+    padding: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+  }
+  #prof p{
+    padding: 10px;
+    font-family:Montserrat;
+  }
+}
+
+
+
+
+// SKILL
+.container_skill{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+%skill{
+  background-color: lightgreen;
+  border: 2px solid black;
+  font-size: 20px;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 60px 8% 10px 8% ;
+  div{
+    padding: 10px;
+  }
+}
+
+.skill_one{
+  @extend %skill;
+  margin-top: 100px
+  
+}
+.header  h3{
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  font-family: Roboto;
+  text-decoration: underline;
+  
+}
+
+.skill_two{
+  @extend %skill;
+  margin-bottom: 60px;
+}
+.header-two  h3{
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  font-family: Roboto;
+  text-decoration: underline;
+  
+}
+
+// THANKS
+.thanks{
+  font-weight: bold;
+  font-size: 30px;
+  text-align: center;
+  margin: 150px 100px 100px 100px;
+  color: white;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+  
+}

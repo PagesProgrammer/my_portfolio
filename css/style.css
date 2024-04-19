@@ -1,0 +1,1179 @@
+* {
+  box-sizing: border-box;
+}
+
+body, html {
+  /* The image used */
+  background: url("../img/ash-edmonds-0aWZdK8nK2I-unsplash.jpg") no-repeat center center fixed;
+  /* Full height */
+  height: 100%;
+  width: 100%;
+  /* Center and scale the image nicely */
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+.around {
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(27, 19, 19);
+  color: white;
+  padding: 0;
+}
+
+.brand {
+  margin: 0.1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding-left: 10px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+.brand a {
+  text-decoration: none;
+  color: white;
+}
+
+.navbar-links ul {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  margin-right: 50px;
+  align-content: space-between;
+}
+
+.navbar-links ul li {
+  list-style: none;
+}
+
+.navbar-links li a {
+  text-decoration: none;
+  color: white;
+  padding: 0.2rem;
+  margin-right: 5rem;
+  display: block;
+  font-family: Oswald;
+  font-size: 20px;
+}
+
+.navbar-links li a:hover {
+  background-color: #555;
+  color: black;
+}
+
+.toggle-button {
+  position: absolute;
+  top: 0.75rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+
+.toggle-button .bar {
+  background-color: white;
+  height: 3px;
+  width: 100%;
+}
+
+@media (max-width: 700px) {
+  .toggle-button {
+    display: flex;
+  }
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+  }
+  .navbar-links {
+    display: none;
+    width: 100%;
+  }
+  .navbar-links {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .navbar-links ul {
+    width: 100%;
+    flex-direction: column;
+  }
+  .navbar-links li {
+    text-align: center;
+  }
+  .navbar-links li a {
+    padding: 0.5rem 1rem;
+  }
+  .navbar-links.active {
+    display: flex;
+  }
+  .brand {
+    font-size: 1rem;
+  }
+  .around {
+    position: static;
+  }
+}
+.networks, .details, .picture {
+  background-color: rgb(73, 71, 78);
+  border: 2px solid black;
+  font-size: 20px;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.details {
+  text-align: center;
+  color: whitesmoke;
+  font-size: 20px;
+  font-family: Raleway;
+}
+
+.networks {
+  background-color: blue;
+  text-align: center;
+}
+
+.container_profile {
+  align-content: center;
+  margin: 150px 100px 0 100px;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.col-sm-12 a {
+  color: white;
+  padding: 5px;
+  margin: 20px;
+  text-decoration: none;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: bold;
+}
+.col-sm-12 h1 {
+  color: white;
+}
+
+a:hover {
+  background-color: whitesmoke;
+  color: black;
+  border: 1px solid white;
+  border-radius: 10px;
+}
+
+.container_myself {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.item_note {
+  margin: 10px 50px 20px 50px;
+  padding: 20px;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 20px;
+  color: aliceblue;
+  background-color: rgb(73, 71, 78);
+  border-radius: 5px;
+}
+.item_note h1 {
+  font-family: Montserrat;
+  font-weight: bold;
+  color: aqua;
+}
+
+.container_experince {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.experience_four, .experience_three, .experience_two, .experience_one {
+  background-color: palegreen;
+  border: 2px solid black;
+  font-size: 20px;
+  border-radius: 10px;
+  padding: 50px;
+  margin: 70px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.experience_one {
+  margin-top: 150px;
+}
+.experience_one .date-role-one {
+  font-family: Raleway;
+  font-size: 25px;
+}
+.experience_one .date-role-one h6 {
+  font-size: 20px;
+  font-family: "Courier New", Courier, monospace;
+}
+.experience_one .company_and_duties_one {
+  text-align: start;
+  padding: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.experience_two .date-role-two {
+  font-family: Raleway;
+  font-size: 25px;
+}
+.experience_two .date-role-two h6 {
+  font-size: 20px;
+  font-family: "Courier New", Courier, monospace;
+}
+.experience_two .company_and_duties_two {
+  text-align: start;
+  padding: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.experience_three .date-role-three {
+  font-family: Raleway;
+  font-size: 25px;
+}
+.experience_three .date-role-three h6 {
+  font-size: 20px;
+  font-family: "Courier New", Courier, monospace;
+}
+.experience_three .company_and_duties_three {
+  text-align: start;
+  padding: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.experience_four .date-role-four {
+  font-family: Raleway;
+  font-size: 25px;
+}
+.experience_four .date-role-four h6 {
+  font-size: 20px;
+  font-family: "Courier New", Courier, monospace;
+}
+.experience_four .company_and_duties_four {
+  text-align: start;
+  padding: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container_education {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.education_ten, .education_nine, .education_eight, .education_seven, .education_six, .education_five, .education_four, .education_three, .education_two, .education_one {
+  background-color: palegreen;
+  border: 2px solid black;
+  font-size: 20px;
+  border-radius: 10px;
+  padding: 40px;
+  margin: 50px 15% 5px 20%;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  min-width: 60%;
+  text-align: center;
+}
+
+.education_one {
+  margin-top: 120px;
+}
+.education_one .date-one {
+  text-align: start;
+  font-family: Raleway;
+  font-size: 25px;
+}
+.education_one .date-one h6 {
+  font-size: 20px;
+  font-family: "Courier New", Courier, monospace;
+}
+.education_one .course-and-syllabus-one {
+  text-align: center;
+  padding: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.education_two .date-two {
+  text-align: start;
+  font-family: Raleway;
+  font-size: 25px;
+}
+.education_two .date-two h6 {
+  font-size: 20px;
+  font-family: "Courier New", Courier, monospace;
+}
+.education_two .course-and-syllabus-two {
+  text-align: center;
+  padding: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.education_three .date-three {
+  text-align: start;
+  font-family: Raleway;
+  font-size: 25px;
+}
+.education_three .date-three h6 {
+  font-size: 20px;
+  font-family: "Courier New", Courier, monospace;
+}
+.education_three .course-and-syllabus-three {
+  text-align: center;
+  padding: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.education_four .date-four {
+  text-align: start;
+  font-family: Raleway;
+  font-size: 25px;
+}
+.education_four .date-four h6 {
+  font-size: 20px;
+  font-family: "Courier New", Courier, monospace;
+}
+.education_four .course-and-syllabus-four {
+  text-align: center;
+  padding: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.education_five .date-five {
+  text-align: start;
+  font-family: Raleway;
+  font-size: 25px;
+}
+.education_five .date-five h6 {
+  font-size: 20px;
+  font-family: "Courier New", Courier, monospace;
+}
+.education_five .course-and-syllabus-five {
+  text-align: center;
+  padding: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.education_six .date-six {
+  text-align: start;
+  font-family: Raleway;
+  font-size: 25px;
+}
+.education_six .date-six h6 {
+  font-size: 20px;
+  font-family: "Courier New", Courier, monospace;
+}
+.education_six .course-and-syllabus-six {
+  text-align: center;
+  padding: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.education_seven .date-seven {
+  text-align: start;
+  font-family: Raleway;
+  font-size: 25px;
+}
+.education_seven .date-seven h6 {
+  font-size: 20px;
+  font-family: "Courier New", Courier, monospace;
+}
+.education_seven .course-and-syllabus-seven {
+  text-align: center;
+  padding: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.education_eight .date-eight {
+  text-align: start;
+  font-family: Raleway;
+  font-size: 25px;
+}
+.education_eight .date-eight h6 {
+  font-size: 20px;
+  font-family: "Courier New", Courier, monospace;
+}
+.education_eight .course-and-syllabus-eight {
+  text-align: center;
+  padding: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.education_nine .date-nine {
+  text-align: start;
+  font-family: Raleway;
+  font-size: 25px;
+}
+.education_nine .date-nine h6 {
+  font-size: 20px;
+  font-family: "Courier New", Courier, monospace;
+}
+.education_nine .course-and-syllabus-nine {
+  text-align: center;
+  padding: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.education_ten {
+  margin-bottom: 50px;
+}
+.education_ten .date-ten {
+  text-align: start;
+  font-family: Raleway;
+  font-size: 25px;
+}
+.education_ten .date-ten h6 {
+  font-size: 20px;
+  font-family: "Courier New", Courier, monospace;
+}
+.education_ten .course-and-syllabus-ten {
+  text-align: center;
+  padding: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#project {
+  margin-left: 100px;
+}
+
+.project_three, .project_two, .project_one {
+  background-color: lightgreen;
+  border: 2px solid black;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  margin: 20px;
+  padding: 10px;
+}
+.project_three img, .project_two img, .project_one img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.project_one a[href] {
+  text-align: center;
+  font-weight: bold;
+  color: black;
+}
+
+.project_two a[href] {
+  text-align: center;
+  font-weight: bold;
+  color: black;
+}
+
+.project_three a[href] {
+  text-align: center;
+  font-weight: bold;
+  color: black;
+}
+
+.container_project_one {
+  margin: 100px 10% 0 10%;
+}
+.container_project_one div > h1 {
+  text-align: start;
+  font-size: 30px;
+  font-weight: bold;
+  padding: 10px;
+  margin: 20px;
+  color: white;
+  text-decoration-line: underline;
+}
+
+.container_project_two {
+  margin: 0 10% 0 10%;
+}
+.container_project_two div > h1 {
+  text-align: start;
+  font-size: 30px;
+  font-weight: bold;
+  padding: 10px;
+  margin: 20px;
+  color: white;
+  text-decoration-line: underline;
+}
+
+.container_project_three {
+  margin: 0 10% 50px 10%;
+}
+.container_project_three div > h1 {
+  text-align: start;
+  font-size: 30px;
+  font-weight: bold;
+  padding: 10px;
+  margin: 20px;
+  color: white;
+  text-decoration-line: underline;
+}
+
+a > img:hover {
+  background-color: rgb(226, 207, 207);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+a > h5:hover {
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.contact_container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.contact_two, .contact_one {
+  background-color: palegreen;
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 20px;
+  font-size: 25px;
+}
+
+.contact_one {
+  margin: 120px 30% 20px 25%;
+}
+.contact_one input {
+  width: 600px;
+  border-radius: 10px;
+}
+.contact_one textarea {
+  width: 100%;
+  border-radius: 10px;
+}
+.contact_one label {
+  padding: 10px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+.contact_one button {
+  width: 100%;
+  background-color: blueviolet;
+  font-size: 23px;
+  font-family: Oswald;
+  border-radius: 10px;
+}
+
+button:hover {
+  background-color: cadetblue;
+  font-weight: bold;
+}
+
+.contact_two {
+  margin: 50px 26.9% 50px 25%;
+  text-align: center;
+  width: 100%;
+}
+.contact_two #contact-icons {
+  background-color: blueviolet;
+  margin: 10px 50px 10px 50px;
+  padding: 15px;
+  border-radius: 10px;
+}
+.contact_two #contact-icons a {
+  color: black;
+  margin: 10px;
+  padding: 10px;
+  text-decoration: none;
+  font-family: Raleway;
+}
+.contact_two #contact-icons #contact-icons a:hover {
+  background-color: #555;
+}
+.contact_two #fullName h2 {
+  padding: 10px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+.contact_two #prof p {
+  padding: 10px;
+  font-family: Montserrat;
+}
+
+.container_skill {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.skill_two, .skill_one {
+  background-color: lightgreen;
+  border: 2px solid black;
+  font-size: 20px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 60px 15% 10px 15%;
+}
+.skill_two div, .skill_one div {
+  padding: 10px;
+}
+
+.skill_one {
+  margin-top: 130px;
+}
+
+.header h3 {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  font-family: Roboto;
+  text-decoration: underline;
+}
+
+.skill_two {
+  margin-bottom: 60px;
+}
+
+.header-two h3 {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  font-family: Roboto;
+  text-decoration: underline;
+}
+
+.thanks {
+  font-weight: bold;
+  font-size: 30px;
+  text-align: center;
+  margin: 150px 100px 100px 100px;
+  color: white;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.transition-fade {
+  opacity: 1;
+  transition: 500ms;
+  /* transform: translateX(0); */
+  transform-origin: right;
+  animation: transitionIn 0.75s;
+}
+
+html.is-animating .transition-fade {
+  opacity: 1;
+  transform: translateX(100%);
+}
+
+html.is-leaving .transition-fade {
+  opacity: 0;
+  transform: translateX(0);
+}
+
+.transition-swipe {
+  transition: 500ms;
+  /* transform: translateY(0); */
+}
+
+html.is-animating .transition-swipe {
+  opacity: 1;
+  transform: translateY(100px);
+}
+
+@keyframes transitionIn {
+  from {
+    opacity: 0;
+    transform: rotateX(-20deg);
+  }
+  to {
+    opacity: 1;
+    transform: rotateX(0);
+  }
+}
+@media (max-width: 420px) {
+  .picture, .details, .networks {
+    background-color: rgb(73, 71, 78);
+    border: 2px solid black;
+    font-size: 20px;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  .details {
+    text-align: center;
+    color: whitesmoke;
+    font-size: 20px;
+    font-family: Raleway;
+    padding: 10px;
+  }
+  .networks {
+    background-color: blue;
+    text-align: center;
+  }
+  .container_profile {
+    align-content: center;
+    margin: 80px 60px 60px 60px;
+  }
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  .col-sm-12 a {
+    color: white;
+    padding: 5px;
+    margin: 5px;
+    text-decoration: none;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-weight: bold;
+  }
+  .col-sm-12 h1 {
+    color: white;
+  }
+  a:hover {
+    background-color: whitesmoke;
+    color: black;
+    border: 1px solid white;
+    border-radius: 10px;
+  }
+  .container_myself {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .item_note {
+    margin: 10px 30px 50px 30px;
+    padding: 20px;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 20px;
+    color: aliceblue;
+    background-color: rgb(73, 71, 78);
+    border-radius: 5px;
+  }
+  .item_note h1 {
+    font-family: Montserrat;
+    font-weight: bold;
+    color: aqua;
+  }
+  .container_experince {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .experience_one, .experience_two, .experience_three, .experience_four {
+    background-color: palegreen;
+    border: 2px solid black;
+    font-size: 20px;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 20px 30px 20px;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  }
+  .experience_one {
+    margin-top: 100px;
+  }
+  .experience_one .date-role-one {
+    font-family: Raleway;
+    font-size: 25px;
+  }
+  .experience_one .date-role-one h6 {
+    font-size: 20px;
+    font-family: "Courier New", Courier, monospace;
+  }
+  .experience_one .company_and_duties_one {
+    text-align: start;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .experience_two .date-role-two {
+    font-family: Raleway;
+    font-size: 25px;
+  }
+  .experience_two .date-role-two h6 {
+    font-size: 20px;
+    font-family: "Courier New", Courier, monospace;
+  }
+  .experience_two .company_and_duties_two {
+    text-align: start;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .experience_three .date-role-three {
+    font-family: Raleway;
+    font-size: 25px;
+  }
+  .experience_three .date-role-three h6 {
+    font-size: 20px;
+    font-family: "Courier New", Courier, monospace;
+  }
+  .experience_three .company_and_duties_three {
+    text-align: start;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .experience_four .date-role-four {
+    font-family: Raleway;
+    font-size: 25px;
+  }
+  .experience_four .date-role-four h6 {
+    font-size: 20px;
+    font-family: "Courier New", Courier, monospace;
+  }
+  .experience_four .company_and_duties_four {
+    text-align: start;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .container_education {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .education_one, .education_two, .education_three, .education_four, .education_five, .education_six, .education_seven, .education_eight, .education_nine, .education_ten {
+    background-color: palegreen;
+    border: 2px solid black;
+    font-size: 20px;
+    border-radius: 10px;
+    padding: 30px;
+    margin: 30px 5% 10px 5%;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    min-width: 60%;
+    text-align: center;
+  }
+  .education_one {
+    margin-top: 80px;
+  }
+  .education_one .date-one {
+    text-align: start;
+    font-family: Raleway;
+    font-size: 25px;
+  }
+  .education_one .date-one h6 {
+    font-size: 20px;
+    font-family: "Courier New", Courier, monospace;
+  }
+  .education_one .course-and-syllabus-one {
+    text-align: left;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .education_two .date-two {
+    text-align: start;
+    font-family: Raleway;
+    font-size: 25px;
+  }
+  .education_two .date-two h6 {
+    font-size: 20px;
+    font-family: "Courier New", Courier, monospace;
+  }
+  .education_two .course-and-syllabus-two {
+    text-align: left;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .education_three .date-three {
+    text-align: start;
+    font-family: Raleway;
+    font-size: 25px;
+  }
+  .education_three .date-three h6 {
+    font-size: 20px;
+    font-family: "Courier New", Courier, monospace;
+  }
+  .education_three .course-and-syllabus-three {
+    text-align: left;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .education_four .date-four {
+    text-align: start;
+    font-family: Raleway;
+    font-size: 25px;
+  }
+  .education_four .date-four h6 {
+    font-size: 20px;
+    font-family: "Courier New", Courier, monospace;
+  }
+  .education_four .course-and-syllabus-four {
+    text-align: left;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .education_five .date-five {
+    text-align: start;
+    font-family: Raleway;
+    font-size: 25px;
+  }
+  .education_five .date-five h6 {
+    font-size: 20px;
+    font-family: "Courier New", Courier, monospace;
+  }
+  .education_five .course-and-syllabus-five {
+    text-align: left;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .education_six .date-six {
+    text-align: start;
+    font-family: Raleway;
+    font-size: 25px;
+  }
+  .education_six .date-six h6 {
+    font-size: 20px;
+    font-family: "Courier New", Courier, monospace;
+  }
+  .education_six .course-and-syllabus-six {
+    text-align: left;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .education_seven .date-seven {
+    text-align: start;
+    font-family: Raleway;
+    font-size: 25px;
+  }
+  .education_seven .date-seven h6 {
+    font-size: 20px;
+    font-family: "Courier New", Courier, monospace;
+  }
+  .education_seven .course-and-syllabus-seven {
+    text-align: left;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .education_eight .date-eight {
+    text-align: start;
+    font-family: Raleway;
+    font-size: 25px;
+  }
+  .education_eight .date-eight h6 {
+    font-size: 20px;
+    font-family: "Courier New", Courier, monospace;
+  }
+  .education_eight .course-and-syllabus-eight {
+    text-align: left;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .education_nine .date-nine {
+    text-align: start;
+    font-family: Raleway;
+    font-size: 25px;
+  }
+  .education_nine .date-nine h6 {
+    font-size: 20px;
+    font-family: "Courier New", Courier, monospace;
+  }
+  .education_nine .course-and-syllabus-nine {
+    text-align: left;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .education_ten {
+    margin-bottom: 50px;
+  }
+  .education_ten .date-ten {
+    text-align: start;
+    font-family: Raleway;
+    font-size: 25px;
+  }
+  .education_ten .date-ten h6 {
+    font-size: 20px;
+    font-family: "Courier New", Courier, monospace;
+  }
+  .education_ten .course-and-syllabus-ten {
+    text-align: left;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .project_one, .project_two, .project_three {
+    background-color: lightgreen;
+    border: 2px solid black;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    margin: 20px 100px 20px 0;
+    padding: 0 50px 0 50px;
+  }
+  .project_one img, .project_two img, .project_three img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  .project_one a[href] {
+    text-align: center;
+    font-weight: bold;
+    color: black;
+  }
+  .project_two a[href] {
+    text-align: center;
+    font-weight: bold;
+    color: black;
+  }
+  .project_three a[href] {
+    text-align: center;
+    font-weight: bold;
+    color: black;
+  }
+  .container_project_one {
+    margin: 80px 50px 30px 50px;
+  }
+  .container_project_one div > h1 {
+    text-align: start;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 10px;
+    margin: 10px 0;
+    color: white;
+    text-decoration-line: underline;
+  }
+  .container_project_two {
+    margin: 30px 50px 30px 50;
+  }
+  .container_project_two div > h1 {
+    text-align: start;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 10px;
+    margin: 10px 0;
+    color: white;
+    text-decoration-line: underline;
+  }
+  .container_project_three {
+    margin: 30px 50px 30px 50;
+  }
+  .container_project_three div > h1 {
+    text-align: start;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 10px;
+    margin: 20px 0;
+    color: white;
+    text-decoration-line: underline;
+  }
+  a > img:hover {
+    background-color: rgb(226, 207, 207);
+    border-radius: 10px;
+    padding: 20px;
+  }
+  a > h5:hover {
+    border-radius: 10px;
+    padding: 20px;
+  }
+  .contact_container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .contact_one, .contact_two {
+    background-color: palegreen;
+    border: 2px solid black;
+    border-radius: 10px;
+    font-size: 25px;
+  }
+  .contact_one {
+    margin: 120px 1% 20px 1%;
+  }
+  .contact_one input {
+    width: 380px;
+    border-radius: 10px;
+  }
+  .contact_one textarea {
+    width: 100%;
+    border-radius: 10px;
+  }
+  .contact_one label {
+    padding: 10px;
+    font-family: Georgia, "Times New Roman", Times, serif;
+  }
+  .contact_one button {
+    width: 100%;
+    background-color: blueviolet;
+    font-size: 23px;
+    font-family: Oswald;
+    border-radius: 10px;
+  }
+  button:hover {
+    background-color: cadetblue;
+    font-weight: bold;
+  }
+  .contact_two {
+    margin: 50px 1% 50px 1%;
+    text-align: center;
+    width: 100%;
+  }
+  .contact_two #contact-icons {
+    background-color: blueviolet;
+    margin: 5px 20px 10px 20px;
+    padding: 15px;
+    border-radius: 10px;
+  }
+  .contact_two #contact-icons a {
+    color: black;
+    margin: 10px;
+    padding: 10px;
+    text-decoration: none;
+    font-family: Raleway;
+  }
+  .contact_two #contact-icons #contact-icons a:hover {
+    background-color: #555;
+  }
+  .contact_two #fullName h2 {
+    padding: 10px;
+    font-family: Georgia, "Times New Roman", Times, serif;
+  }
+  .contact_two #prof p {
+    padding: 10px;
+    font-family: Montserrat;
+  }
+  .container_skill {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .skill_one, .skill_two {
+    background-color: lightgreen;
+    border: 2px solid black;
+    font-size: 20px;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 60px 8% 10px 8%;
+  }
+  .skill_one div, .skill_two div {
+    padding: 10px;
+  }
+  .skill_one {
+    margin-top: 100px;
+  }
+  .header h3 {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: Roboto;
+    text-decoration: underline;
+  }
+  .skill_two {
+    margin-bottom: 60px;
+  }
+  .header-two h3 {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: Roboto;
+    text-decoration: underline;
+  }
+  .thanks {
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+    margin: 150px 100px 100px 100px;
+    color: white;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
